@@ -38,7 +38,7 @@
 // of drm.h being included causing compilation to fail
 #include <drm/msm_drm.h>
 #ifdef KERNEL_5_4
-#include <drm/sde_drm.h>
+#include <display/drm/sde_drm.h>
 #endif
 #include <algorithm>
 #include <iterator>

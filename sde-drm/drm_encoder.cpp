@@ -30,7 +30,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <drm.h>
-#include <drm/sde_drm.h>
+#include <display/drm/sde_drm.h>
 #include <drm_logger.h>
 #include <errno.h>
 #include <stdlib.h>
