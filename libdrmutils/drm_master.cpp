@@ -37,9 +37,7 @@
 // that doesn't use keyword "virtual" for a variable name. Not doing so leads to the kernel version
 // of drm.h being included causing compilation to fail
 #include <drm/msm_drm.h>
-#ifdef KERNEL_5_4
 #include <display/drm/sde_drm.h>
-#endif
 #include <algorithm>
 #include <iterator>
 
