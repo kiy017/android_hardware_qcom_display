@@ -30,7 +30,7 @@
 #ifdef PP_DRM_ENABLE
 #include <xf86drm.h>
 #include <xf86drmMode.h>
-#include <drm/msm_drm_pp.h>
+#include <display/drm/msm_drm_pp.h>
 #endif
 #include <drm_logger.h>
 #include <cstring>

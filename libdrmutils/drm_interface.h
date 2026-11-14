@@ -39,10 +39,10 @@
 #include "xf86drm.h"
 #include "xf86drmMode.h"
 #include <drm/msm_drm.h>
-#include <drm/msm_drm_pp.h>
+#include <display/drm/msm_drm_pp.h>
 
 #ifdef KERNEL_5_4
-#include <drm/sde_drm.h>
+#include <display/drm/sde_drm.h>
 #endif
 
 namespace sde_drm {

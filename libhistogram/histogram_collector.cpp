@@ -33,7 +33,7 @@
 #include <vector>
 
 #include <drm/msm_drm.h>
-#include <drm/msm_drm_pp.h>
+#include <display/drm/msm_drm_pp.h>
 #include <xf86drm.h>
 #include <xf86drmMode.h>
 

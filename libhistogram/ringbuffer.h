@@ -16,7 +16,7 @@
 
 #pragma once
 #include <drm/msm_drm.h>
-#include <drm/msm_drm_pp.h>
+#include <display/drm/msm_drm_pp.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <utils/Timers.h>
