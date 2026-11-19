@@ -70,6 +70,7 @@
 #endif
 
 #include <drm/drm_fourcc.h>
+#include <display/drm/sde_drm.h>
 
 #include <cutils/properties.h>
 #include <algorithm>
