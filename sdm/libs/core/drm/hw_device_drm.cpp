@@ -641,7 +641,9 @@ DisplayError HWDeviceDRM::PopulateDisplayAttributes(uint32_t index) {
     mm_width = connector_info_.mmWidth;
     mm_height = connector_info_.mmHeight;
     topology = connector_info_.modes[index].topology;
-    if (mode.flags & DRM_MODE_FLAG_CMD_MODE_PANEL) {
+    // msm-5.x reports the panel type in the connector info ("panel mode"),
+    // not in the mode flags (sde_drm.h's CMD_MODE_PANEL is not a mode flag).
+    if (connector_info_.panel_mode == sde_drm::DRMPanelMode::COMMAND) {
       display_attributes_[index].smart_panel = true;
     }
   }
@@ -777,13 +779,6 @@ void HWDeviceDRM::PopulateHWPanelInfo() {
 
   GetHWDisplayPortAndMode();
   GetHWPanelMaxBrightness();
-
-  if (current_mode.flags & DRM_MODE_FLAG_CMD_MODE_PANEL) {
-    hw_panel_info_.mode = kModeCommand;
-  }
-  if (current_mode.flags & DRM_MODE_FLAG_VID_MODE_PANEL) {
-    hw_panel_info_.mode = kModeVideo;
-  }
 
   DLOGI_IF(kTagDriverConfig, "%s, Panel Interface = %s, Panel Mode = %s, Is Primary = %d",
            device_name_, interface_str_.c_str(),
